@@ -5,3 +5,10 @@ function initMap() {
     zoom: 8
   });
 }
+
+function stringShow() {
+  var desc = document.querySelector('.description p');
+    console.log(desc.textContent.substring(0, 50));
+}
+
+stringShow();

@@ -3,6 +3,8 @@ var app        = express();
 var mongoose   = require('mongoose');
 var bodyParser = require('body-parser');
 var Restaurant = require('./models/restaurant');
+var seedDB     = require('./seed');
+seedDB();
 
 mongoose.connect('mongodb://localhost/restaurant_node');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -40,6 +42,38 @@ app.get('/restaurants', function(req, res) {
       console.log(err);
     } else {
       res.render('restaurants/restaurants', {restaurant: allRest});
+    }
+  });
+});
+
+app.get('/restaurants/new', function(req, res) {
+  res.render('restaurants/new');
+});
+
+app.post('/restaurants', function(req, res) {
+  // req.params acquires the posting information and passed through the Restaurant.create function
+  var name = req.body.name;
+  var type = req.body.type;
+  var image = req.body.image;
+  var desc = req.body.description;
+  var location = req.body.location;
+  var rating = req.body.rating;
+
+  var newRest = ({
+    name: name,
+    type: type,
+    image: image,
+    description: desc,
+    location: location,
+    rating: rating
+
+  });
+
+  Restaurant.create(newRest, function(err, restCreated){
+    if(err) {
+      console.log(err);
+    } else {
+      res.redirect('/restaurants');
     }
   });
 });

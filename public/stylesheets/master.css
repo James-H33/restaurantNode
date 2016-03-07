@@ -1,1 +1,28 @@
+.formContainer {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
+.formContainer h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/************************************************
+// Media Query
+************************************************/
+
+@media (min-width: 769px) {
+
+  .formContainer {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .formContainer h1 {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+}

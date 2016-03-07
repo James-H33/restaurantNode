@@ -9,6 +9,12 @@
           We have hundreds of restaurants to explore.
         </p>
         <hr>
+        <div class="headerButton">
+          <p>
+            Add your restaurant today for free
+          </p>
+          <a class="btn btn-primary" href="/restaurants/new"> Add Now</a>
+        </div>
     </div>
   </div>
 </div>
@@ -20,10 +26,11 @@
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <img src="<%= item.image %>" alt="...">
+        <hr>
         <div class="caption">
           <h3><%= item.name %></h3>
           <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> <%= item.location %></p>
-          <p><a href="/restaurants/<%= item._id %>" class="btn btn-primary" role="button">Button</a></p>
+          <p><a href="/restaurants/<%= item._id %>" class="btn btn-danger" role="button">Button</a></p>
         </div>
       </div>
     </div>

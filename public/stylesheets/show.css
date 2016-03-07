@@ -12,8 +12,9 @@ hr {
 }
 
 .container {
-  border: 1px solid black;
+  width: 100%;
   margin: 0 auto;
+  padding: 1em;
   background: #f9f9f9;
 }
 
@@ -64,20 +65,30 @@ hr {
   text-align: center;
 }
 
+/************************************************
+// Media Query
+************************************************/
+
 @media (min-width: 769px) {
 
   .col {
     margin: 0 auto;
     padding: 1em;
-    width: 45%;
+    width: 48%;
     vertical-align: top;
     margin: 0;
     display: inline-block;
   }
 
   .commentsContainer {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background: #f9f9f9;
   }
 
 
