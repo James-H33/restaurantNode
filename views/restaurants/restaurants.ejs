@@ -1,25 +1,36 @@
 <% include ../partials/header %>
+<link rel="stylesheet" href="/stylesheets/restaurant.css" media="screen" title="no title" charset="utf-8">
 
-<h1>Restaurants Page</h1>
-<div class="container">
-<%  restaurant.forEach(function(item) { %>
-    <p>
-      <%= item.name %>
-    </p>
-    <p>
-      <%= item.type %>
-    </p>
-    <p>
-      <%= item.location %>
-    </p>
-    <p>
-      <%= item.description %>
-    </p>
-    <p>
-      <%= item.rating %>
-    </p>
-  <% }); %>
-
+<div class="headerContainer">
+  <div class="headerOverlay">
+    <div class="headerContent">
+        <h1>Discover</h1>
+        <p>
+          We have hundreds of restaurants to explore.
+        </p>
+        <hr>
+    </div>
+  </div>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <%  restaurant.forEach(function(item) { %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="<%= item.image %>" alt="...">
+        <div class="caption">
+          <h3><%= item.name %></h3>
+          <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> <%= item.location %></p>
+          <p><a href="/restaurants/<%= item._id %>" class="btn btn-primary" role="button">Button</a></p>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+
 
 <% include ../partials/footer %>
