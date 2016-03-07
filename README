@@ -1,6 +1,7 @@
 npm init
 
 Dependencies
--- Express
--- Ejs
---
+-- express
+-- ejs
+-- mongoose
+-- body-parser

@@ -1,5 +1,25 @@
 <% include ../partials/header %>
 
 <h1>Restaurants Page</h1>
+<div class="container">
+<%  restaurant.forEach(function(item) { %>
+    <p>
+      <%= item.name %>
+    </p>
+    <p>
+      <%= item.type %>
+    </p>
+    <p>
+      <%= item.location %>
+    </p>
+    <p>
+      <%= item.description %>
+    </p>
+    <p>
+      <%= item.rating %>
+    </p>
+  <% }); %>
+
+</div>
 
 <% include ../partials/footer %>
