@@ -6,7 +6,8 @@ var Restaurant = require('./models/restaurant');
 var seedDB     = require('./seed');
 seedDB();
 
-mongoose.connect('mongodb://localhost/restaurant_node');
+// mongoose.connect('mongodb://localhost/restaurant_node');
+mongoose.connect('mongodb://restbud:String33@ds023438.mlab.com:23438/restaurant_node');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -88,6 +89,6 @@ app.get('/restaurants/:id', function(req, res) {
   });
 });
 
-app.listen(27017, function() {
+app.listen(process.env.PORT, process.env.IP, function() {
   console.log("Server has started...");
 });
