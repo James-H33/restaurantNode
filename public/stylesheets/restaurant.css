@@ -100,7 +100,7 @@ li {
 }
 
 .btn-primary {
-  background: #d9534f;
+  background: #009688;
   border: none;
   margin: 0 5px;
 }
@@ -124,6 +124,11 @@ li {
 // Restaurant Display
 *****************************************************/
 
+.container h1 {
+  text-align: center;
+  font-size: 22px;
+  margin: 30px;
+}
 .container {
   margin-top: 50px;
 }
@@ -172,12 +177,13 @@ li {
   }
 
 /*****************************************************
-// Middle Content
+// Restaurant Display
 *****************************************************/
 
 .container h1 {
   text-align: center;
   margin: 30px;
+  font-size: 3rem;
 }
 
 
